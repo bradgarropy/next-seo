@@ -1,0 +1,51 @@
+{
+    "name": "@bradgarropy/next-seo",
+    "version": "0.0.1",
+    "description": "🚂 next-seo",
+    "keywords": [
+        "nextjs",
+        "seo",
+        "facebook",
+        "twitter",
+        "open graph",
+        "meta"
+    ],
+    "homepage": "https://github.com/bradgarropy/next-seo#readme",
+    "bugs": {
+        "url": "https://github.com/bradgarropy/next-seo/issues"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Brad Garropy",
+        "email": "bradgarropy@gmail.com",
+        "url": "https://bradgarropy.com"
+    },
+    "main": "src/index.js",
+    "bin": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bradgarropy/next-seo"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "dependencies": {
+        "next": "^10.0.4",
+        "prop-types": "^15.7.2"
+    },
+    "devDependencies": {
+        "@bradgarropy/eslint-config": "^1.1.0",
+        "@bradgarropy/eslint-config-react": "^1.0.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.15.0",
+        "eslint-config-prettier": "^7.1.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.21.5",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "prettier": "^2.2.1",
+        "react": "^17.0.1"
+    },
+    "peerDependencies": {}
+}
