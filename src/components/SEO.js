@@ -1,12 +1,12 @@
 import Facebook from "components/Facebook"
 import Meta from "components/Meta"
-import seo from "components/seo"
 import Twitter from "components/Twitter"
 import {useRouter} from "next/router"
 import PropTypes from "prop-types"
 
 const SEO = ({title = "", description = "", image = ""}) => {
     const {asPath} = useRouter()
+    const seo = {}
 
     const defaultTitle = seo.title
     const defaultTwitterImage = `${seo.url}/twitter.png`

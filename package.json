@@ -20,32 +20,39 @@
         "email": "bradgarropy@gmail.com",
         "url": "https://bradgarropy.com"
     },
-    "main": "src/index.js",
+    "main": "dist/index.js",
     "bin": {},
     "repository": {
         "type": "git",
         "url": "https://github.com/bradgarropy/next-seo"
     },
     "scripts": {
+        "build": "babel src -d dist",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix"
     },
     "dependencies": {
         "next": "^10.0.4",
-        "prop-types": "^15.7.2"
+        "prop-types": "^15.7.2",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
     },
     "devDependencies": {
+        "@babel/cli": "^7.12.10",
+        "@babel/core": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/preset-react": "^7.12.10",
         "@bradgarropy/eslint-config": "^1.1.0",
         "@bradgarropy/eslint-config-react": "^1.0.0",
         "babel-eslint": "^10.1.0",
+        "babel-plugin-module-resolver": "^4.1.0",
         "eslint": "^7.15.0",
         "eslint-config-prettier": "^7.1.0",
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-react": "^7.21.5",
         "eslint-plugin-react-hooks": "^4.2.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
-        "prettier": "^2.2.1",
-        "react": "^17.0.1"
+        "prettier": "^2.2.1"
     },
     "peerDependencies": {}
 }
