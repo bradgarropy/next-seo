@@ -1,7 +1,19 @@
 import Head from "next/head"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
-const Meta = ({title = "", description = "", keywords = [], icon = ""}) => {
+type MetaProps = {
+    title?: string
+    description?: string
+    keywords?: string[]
+    icon?: string
+}
+
+const Meta: FC<MetaProps> = ({
+    title = "",
+    description = "",
+    keywords = [],
+    icon = "",
+}) => {
     return (
         <Head>
             <html lang="en" />
@@ -11,13 +23,6 @@ const Meta = ({title = "", description = "", keywords = [], icon = ""}) => {
             <link rel="icon" type="image/png" href={icon} />
         </Head>
     )
-}
-
-Meta.propTypes = {
-    title: PropTypes.string,
-    description: PropTypes.string,
-    keywords: PropTypes.arrayOf(PropTypes.string),
-    icon: PropTypes.string,
 }
 
 export default Meta

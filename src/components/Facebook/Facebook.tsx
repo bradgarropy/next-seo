@@ -1,7 +1,15 @@
 import Head from "next/head"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
-const Facebook = ({
+type FacebookProps = {
+    url?: string
+    type?: string
+    title?: string
+    description?: string
+    image?: string
+}
+
+const Facebook: FC<FacebookProps> = ({
     url = "",
     type = "website",
     title = "",
@@ -17,14 +25,6 @@ const Facebook = ({
             <meta property="og:image" content={image} />
         </Head>
     )
-}
-
-Facebook.propTypes = {
-    url: PropTypes.string,
-    type: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    image: PropTypes.string,
 }
 
 export default Facebook

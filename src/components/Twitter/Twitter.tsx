@@ -1,7 +1,15 @@
 import Head from "next/head"
-import PropTypes from "prop-types"
+import {FC} from "react"
 
-const Twitter = ({
+type TwitterProps = {
+    card?: string
+    site?: string
+    title?: string
+    description?: string
+    image?: string
+}
+
+const Twitter: FC<TwitterProps> = ({
     card = "summary",
     site = "",
     title = "",
@@ -17,14 +25,6 @@ const Twitter = ({
             <meta name="twitter:image" content={image} />
         </Head>
     )
-}
-
-Twitter.propTypes = {
-    card: PropTypes.string,
-    site: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    image: PropTypes.string,
 }
 
 export default Twitter
