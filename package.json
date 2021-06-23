@@ -1,16 +1,21 @@
 {
-    "name": "@bradgarropy/next-seo",
+    "name": "next-seo",
     "version": "0.0.1",
-    "description": "🚂 next-seo",
+    "description": "🔎 next seo",
     "keywords": [
-        "nextjs",
+        "typescript",
+        "react",
+        "eslint",
+        "prettier",
+        "jest",
+        "next",
         "seo",
         "facebook",
         "twitter",
         "open graph",
         "meta"
     ],
-    "homepage": "https://github.com/bradgarropy/next-seo#readme",
+    "homepage": "https://github.com/bradgarropy/next-seo",
     "bugs": {
         "url": "https://github.com/bradgarropy/next-seo/issues"
     },
@@ -20,39 +25,63 @@
         "email": "bradgarropy@gmail.com",
         "url": "https://bradgarropy.com"
     },
+    "files": [
+        "dist"
+    ],
     "main": "dist/index.js",
-    "bin": {},
+    "types": "dist/types/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/bradgarropy/next-seo"
     },
     "scripts": {
-        "build": "babel src -d dist",
+        "start": "tsc --watch",
+        "build": "tsc",
         "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
-    },
-    "dependencies": {
-        "next": "^10.0.4",
-        "prop-types": "^15.7.2",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1"
+        "lint:fix": "eslint --fix .",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write .",
+        "test": "jest --passWithNoTests",
+        "test:watch": "jest --passWithNoTests --watch",
+        "contributors": "all-contributors generate",
+        "prepare": "tsc"
     },
     "devDependencies": {
-        "@babel/cli": "^7.12.10",
-        "@babel/core": "^7.12.10",
-        "@babel/preset-env": "^7.12.11",
-        "@babel/preset-react": "^7.12.10",
         "@bradgarropy/eslint-config": "^1.1.0",
         "@bradgarropy/eslint-config-react": "^1.0.0",
+        "@bradgarropy/eslint-config-typescript": "^1.0.1",
+        "@testing-library/jest-dom": "^5.11.10",
+        "@testing-library/react": "^11.2.5",
+        "@testing-library/react-hooks": "^5.1.0",
+        "@testing-library/user-event": "^13.1.9",
+        "@types/jest": "^26.0.20",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@typescript-eslint/eslint-plugin": "^4.14.1",
+        "@typescript-eslint/parser": "^4.14.1",
+        "all-contributors-cli": "^6.20.0",
         "babel-eslint": "^10.1.0",
-        "babel-plugin-module-resolver": "^4.1.0",
-        "eslint": "^7.15.0",
-        "eslint-config-prettier": "^7.1.0",
+        "eslint": "^7.18.0",
+        "eslint-config-prettier": "^8.2.0",
         "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-react": "^7.21.5",
+        "eslint-plugin-react": "^7.22.0",
         "eslint-plugin-react-hooks": "^4.2.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
-        "prettier": "^2.2.1"
+        "husky": "^5.1.3",
+        "jest": "^26.6.3",
+        "lint-staged": "^10.5.4",
+        "next": "^11.0.1",
+        "prettier": "^2.2.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "ts-jest": "^26.5.3",
+        "tslib": "^2.1.0",
+        "typescript": "^4.1.3"
     },
-    "peerDependencies": {}
+    "peerDependencies": {
+        "react": ">=16"
+    },
+    "engines": {
+        "node": ">=10"
+    }
 }
