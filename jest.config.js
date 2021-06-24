@@ -2,10 +2,10 @@ const config = {
     clearMocks: true,
     collectCoverage: true,
     collectCoverageFrom: ["<rootDir>/src/**"],
-    setupFilesAfterEnv: ["<rootDir>/test/setup.ts"],
-    transform: {
-        "^.+\\.(ts|tsx)$": "ts-jest",
-    },
+    preset: "ts-jest",
+    setupFilesAfterEnv: ["<rootDir>/test/setup.tsx"],
+    testEnvironment: "jsdom",
+    testPathIgnorePatterns: ["<rootDir>/dist", "<rootDir>/node_modules"],
     verbose: true,
 }
 

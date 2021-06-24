@@ -1,8 +1,9 @@
-import Facebook from "components/Facebook"
-import Meta from "components/Meta"
-import Twitter from "components/Twitter"
-import {useRouter} from "next/router"
+import Head from "next/head"
 import {FC} from "react"
+
+import Facebook from "../Facebook"
+import Meta from "../Meta"
+import Twitter from "../Twitter"
 
 type SEOProps = {
     title?: string
@@ -11,8 +12,6 @@ type SEOProps = {
 }
 
 const SEO: FC<SEOProps> = ({title = "", description = "", image = ""}) => {
-    const {asPath} = useRouter()
-
     const seo = {
         title: "TEST",
         url: "TEST",
@@ -25,16 +24,11 @@ const SEO: FC<SEOProps> = ({title = "", description = "", image = ""}) => {
     const defaultFacebookImage = `${seo.url}/facebook.png`
 
     const seoImage = `${seo.url}${image}`
-    const seoUrl = `${seo.url}${asPath}`
+    const seoUrl = `${seo.url}`
 
     return (
-        <>
-            <Meta
-                title={title || defaultTitle}
-                description={description}
-                keywords={seo.keywords}
-                icon={`${seo.url}/favicon.png`}
-            />
+        <Head>
+            <Meta title={title || defaultTitle} />
 
             <Facebook
                 url={seoUrl}
@@ -49,7 +43,7 @@ const SEO: FC<SEOProps> = ({title = "", description = "", image = ""}) => {
                 description={description}
                 image={image ? seoImage : defaultTwitterImage}
             />
-        </>
+        </Head>
     )
 }
 
