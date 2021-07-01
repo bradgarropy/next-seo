@@ -12,7 +12,7 @@
 
 _🔎 seo component for [next.js][next]_
 
-[Next.js][next] provides a `<Head>` component to update meta tags. However, there's still much to understand if you want to achieve proper SEO. This component makes it easy to manage your SEO tags. It supports [Facebook][facebook], [Twitter][twitter], [Open Graph][og], and `meta` tags.
+[Next.js][next] provides a `<Head>` component to update meta tags. However, there's still much to understand if you want to achieve proper SEO. This component makes it easy to manage your SEO tags. It supports [Facebook][facebook], [Twitter][twitter-cards], [Open Graph][og], and `meta` tags.
 
 ## 📦 Installation
 
@@ -137,7 +137,7 @@ All of the `SEO` props are optional. If a prop is not provided, the associated m
 
 [next]: https://nextjs.org
 [facebook]: https://developers.facebook.com/docs/sharing/webmasters
-[twitter]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
+[twitter-cards]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
 [og]: https://ogp.me
 [version-badge]: https://img.shields.io/npm/v/@bradgarropy/next-seo.svg?style=flat-square
 [downloads-badge]: https://img.shields.io/npm/dt/@bradgarropy/next-seo?style=flat-square
