@@ -14,6 +14,12 @@ _🔎 seo component for [next.js][next]_
 
 [Next.js][next] provides a `<Head>` component to update meta tags. However, there's still much to understand if you want to achieve proper SEO. This component makes it easy to manage your SEO tags. It supports [Facebook][facebook], [Twitter][twitter-cards], [Open Graph][og], and `meta` tags.
 
+<p align="center">
+    <a href="https://www.npmjs.com/package/@bradgarropy/next-seo">
+        <img alt="next link" src="./images/github.png" width="500">
+    </a>
+</p>
+
 ## 📦 Installation
 
 This package is hosted on [`npm`][npm].
