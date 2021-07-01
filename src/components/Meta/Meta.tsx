@@ -1,21 +1,21 @@
+import Head from "next/head"
 import {FC} from "react"
 
-import config from "../../../package.json"
-
 type MetaProps = {
-    title: string
+    title?: string
+    description?: string
+    keywords?: string[]
+    icon?: string
 }
 
-const Meta: FC<MetaProps> = ({title}) => {
-    const {description, keywords} = config
-
+const Meta: FC<MetaProps> = ({title, description, keywords, icon}) => {
     return (
-        <>
-            <title>{title}</title>
-            <meta name="description" content={description} />
-            <meta name="keywords" content={keywords.join(", ")} />
-            <link rel="icon" href="/favicon.ico" />
-        </>
+        <Head>
+            {title && <title>{title}</title>}
+            {description && <meta name="description" content={description} />}
+            {keywords && <meta name="keywords" content={keywords.join(", ")} />}
+            {icon && <link rel="icon" href={icon} />}
+        </Head>
     )
 }
 

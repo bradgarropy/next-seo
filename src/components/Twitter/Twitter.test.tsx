@@ -27,8 +27,6 @@ test("includes default twitter meta", () => {
 
     Object.keys(mockTwitter).forEach(key => {
         const meta = document.querySelector(`meta[name='twitter:${key}']`)
-        const content = meta?.getAttribute("content")
-
-        expect(content).toEqual(mockTwitter[key as keyof typeof mockTwitter])
+        expect(meta).toBeNull()
     })
 })

@@ -1,49 +1,51 @@
-import Head from "next/head"
 import {FC} from "react"
 
-import Facebook from "../Facebook"
+import Facebook, {FacebookProps} from "../Facebook"
 import Meta from "../Meta"
-import Twitter from "../Twitter"
+import Twitter, {TwitterProps} from "../Twitter"
 
 type SEOProps = {
     title?: string
     description?: string
-    image?: string
+    keywords?: string[]
+    icon?: string
+    facebook?: Pick<FacebookProps, "image" | "type" | "url">
+    twitter?: Pick<TwitterProps, "image" | "card" | "site">
 }
 
-const SEO: FC<SEOProps> = ({title = "", description = "", image = ""}) => {
-    const seo = {
-        title: "TEST",
-        url: "TEST",
-        keywords: ["TEST"],
-        twitter: "TEST",
-    }
-
-    const defaultTitle = seo.title
-    const defaultTwitterImage = `${seo.url}/twitter.png`
-    const defaultFacebookImage = `${seo.url}/facebook.png`
-
-    const seoImage = `${seo.url}${image}`
-    const seoUrl = `${seo.url}`
-
+const SEO: FC<SEOProps> = ({
+    title,
+    description,
+    keywords,
+    icon,
+    facebook,
+    twitter,
+}) => {
     return (
-        <Head>
-            <Meta title={title || defaultTitle} />
+        <>
+            <Meta
+                title={title}
+                description={description}
+                keywords={keywords}
+                icon={icon}
+            />
 
             <Facebook
-                url={seoUrl}
-                title={title || defaultTitle}
+                title={title}
                 description={description}
-                image={image ? seoImage : defaultFacebookImage}
+                image={facebook?.image}
+                url={facebook?.url}
+                type={facebook?.type}
             />
 
             <Twitter
-                site={seo.twitter}
-                title={title || defaultTitle}
+                title={title}
                 description={description}
-                image={image ? seoImage : defaultTwitterImage}
+                image={twitter?.image}
+                site={twitter?.site}
+                card={twitter?.card}
             />
-        </Head>
+        </>
     )
 }
 

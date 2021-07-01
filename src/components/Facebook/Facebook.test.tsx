@@ -27,8 +27,6 @@ test("includes default facebook meta", () => {
 
     Object.keys(mockFacebook).forEach(key => {
         const meta = document.querySelector(`meta[property='og:${key}']`)
-        const content = meta?.getAttribute("content")
-
-        expect(content).toEqual(mockFacebook[key as keyof typeof mockFacebook])
+        expect(meta).toBeNull()
     })
 })

@@ -1,59 +1,23 @@
-# 🚂 next-seo
+# 🔎 next seo
 
-<a href="https://npmjs.com/package/@bradgarropy/next-seo">
-    <img alt="npm" src="https://img.shields.io/npm/v/@bradgarropy/next-seo.svg?style=flat-square">
-</a>
-
-<a href="https://npmjs.com/package/@bradgarropy/next-seo">
-    <img alt="npm" src="https://img.shields.io/npm/dt/@bradgarropy/next-seo?style=flat-square">
-</a>
+[![version][version-badge]][npm]
+[![downloads][downloads-badge]][npm]
+[![size][size-badge]][bundlephobia]
+[![github actions][github-actions-badge]][github-actions]
+[![coverage][codecov-badge]][codecov]
+[![typescript][typescript-badge]][typescript]
+[![contributing][contributing-badge]][contributing]
+[![contributors][contributors-badge]][contributors]
+[![discord][discord-badge]][discord]
 
 _SEO component for [Next.js][next]. Supports [Facebook][facebook], [Twitter][twitter], [Open Graph][og], and `meta` tags._
 
-### 📦 Installation
+## 📦 Installation
 
-This package is installable from [npm][npm].
+This package is hosted on [`npm`][npm].
 
-```shell
-npm install @bradgarropy/next-seo
-```
-
-### ⚙ Configuration
-
-Head over to the `gatsby-config.js` file and add `@bradgarropy/next-seo` to the list of `plugins`.
-
-```javascript
-// gatsby-config.js
-
-module.exports = {
-    siteMetadata: {
-        url: "https://bradgarropy.com",
-        title: "Brad Garropy",
-        description: "🏡 My home on the web.",
-        keywords: ["gatsby", "portfolio"],
-        twitter: "bradgarropy",
-    },
-    plugins: ["@bradgarropy/next-seo"],
-}
-```
-
-Some fields in `siteMetadata` are also required.
-
-| Name          | Description                          |
-| ------------- | ------------------------------------ |
-| `url`         | Base url of the website.             |
-| `title`       | Document title shown in the browser. |
-| `description` | Meta description of the page.        |
-| `keywords`    | Keywords describing the page.        |
-| `twitter`     | Twitter handle, without the `@`.     |
-
-This plugin also expects the default social media cards and favicon to be availabe at `/facebook.png`, `/twitter.png`, and `/favicon.png`. This can be accomplished by placing these images in the `static` directory.
-
-```
-static/
-  |  facebook.png
-  |  favicon.png
-  |  twitter.png
+```bash
+npm install @bradgarropy/next-link
 ```
 
 ### 🥑 Usage
@@ -80,17 +44,73 @@ const App = () => (
 )
 ```
 
-### ❔ Questions
+## 📖 API Reference
 
-If you have any trouble, definitely [open an issue][issue] and I'll take a look.
+### `<Link>`
 
-If all else fails, you can ask me directly on [Twitter][twitter] or my [AMA][ama].
+| Name | Required | Default | Example                                    | Description               |
+| :--- | :------: | :-----: | :----------------------------------------- | :------------------------ |
+| `to` |  `true`  |         | `"/home"` <br> `"https://bradgarropy.com"` | Internal or external url. |
+
+The component also passes through all other `props`, like `className` or `passHref`. See the [`next/link`][link] documentation for other relevant props. The examples below cover some common uses.
+
+```jsx
+// internal link
+<Link to="/home">home</Link>
+
+// internal link with additional props
+<Link to="/home" className="nav-link">home</Link>
+
+// external link
+<Link to="https://bradgarropy.com">website</Link>
+
+// external link with additional props
+<Link to="https://bradgarropy.com" className="nav-link">website</Link>
+```
+
+## ❔ Questions
+
+🐛 report bugs by filing [issues][issues]  
+📢 provide feedback with [issues][issues] or on [twitter][twitter]  
+🙋🏼‍♂️ use my [ama][ama] or [twitter][twitter] to ask any other questions
+
+## ✨ contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="https://github.com/bradgarropy/next-link/commits?author=bradgarropy" title="Code">💻</a> <a href="https://github.com/bradgarropy/next-link/commits?author=bradgarropy" title="Documentation">📖</a> <a href="https://github.com/bradgarropy/next-link/commits?author=bradgarropy" title="Tests">⚠️</a> <a href="#infra-bradgarropy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 [next]: https://nextjs.org
-[facebook]: https://www.facebook.com/profile.php?id=7933107
-[twitter]: https://twitter.com/bradgarropy
+[facebook]: https://developers.facebook.com/docs/sharing/webmasters
+[twitter]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
 [og]: https://ogp.me
+[version-badge]: https://img.shields.io/npm/v/@bradgarropy/next-seo.svg?style=flat-square
+[downloads-badge]: https://img.shields.io/npm/dt/@bradgarropy/next-seo?style=flat-square
+[bundlephobia]: https://bundlephobia.com/result?p=@bradgarropy/next-seo
+[size-badge]: https://img.shields.io/bundlephobia/minzip/@bradgarropy/next-seo?style=flat-square
+[github-actions]: https://github.com/bradgarropy/next-seo/actions
+[github-actions-badge]: https://img.shields.io/github/workflow/status/bradgarropy/next-seo/%F0%9F%9A%80%20release?style=flat-square
+[codecov]: https://app.codecov.io/gh/bradgarropy/next-seo
+[codecov-badge]: https://img.shields.io/codecov/c/github/bradgarropy/next-seo?style=flat-square
+[typescript]: https://www.typescriptlang.org/dt/search?search=%40bradgarropy%2Fnext-seo
+[typescript-badge]: https://img.shields.io/npm/types/@bradgarropy/next-seo?style=flat-square
+[contributing]: https://github.com/bradgarropy/next-seo/blob/master/contributing.md
+[contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
+[contributors]: #-contributors
+[contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/next-seo?style=flat-square
+[discord]: https://bradgarropy.com/discord
+[discord-badge]: https://img.shields.io/discord/748196643140010015?style=flat-square
 [npm]: https://npmjs.com
-[issue]: https://github.com/bradgarropy/next-seo/issues
+[issues]: https://github.com/bradgarropy/next-seo/issues
 [twitter]: https://twitter.com/bradgarropy
 [ama]: https://bradgarropy.com/ama

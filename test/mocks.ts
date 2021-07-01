@@ -1,21 +1,41 @@
 const mockMeta = {
-    title: "next starter",
+    title: "test title",
+    description: "test description",
+    keywords: ["test", "keywords"],
+    icon: "/favicon.ico",
 }
 
 const mockFacebook = {
-    url: "https://next-starter.bradgarropy.vercel.app",
+    title: mockMeta.title,
+    description: mockMeta.description,
+    url: "https://test.com",
+    image: "/facebook.png",
     type: "website",
-    title: "next starter",
-    description: "⏭ next.js starter",
-    image: "https://next-starter.bradgarropy.vercel.app/facebook.png",
 }
 
 const mockTwitter = {
+    title: mockMeta.title,
+    description: mockMeta.description,
+    image: "/twitter.png",
+    site: "@test",
     card: "summary",
-    site: "@bradgarropy",
-    title: "next starter",
-    description: "⏭ next.js starter",
-    image: "https://next-starter.bradgarropy.vercel.app/twitter.png",
 }
 
-export {mockFacebook, mockMeta, mockTwitter}
+const mockSEO = {
+    title: mockMeta.title,
+    description: mockMeta.description,
+    keywords: mockMeta.keywords,
+    icon: mockMeta.icon,
+    facebook: {
+        url: mockFacebook.url,
+        image: mockFacebook.image,
+        type: mockFacebook.type,
+    },
+    twitter: {
+        image: mockTwitter.image,
+        site: mockTwitter.site,
+        card: mockTwitter.card,
+    },
+}
+
+export {mockFacebook, mockMeta, mockSEO, mockTwitter}

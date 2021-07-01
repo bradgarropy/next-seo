@@ -1,9 +1,24 @@
 {
-    "name": "example",
-    "version": "0.1.0",
-    "private": true,
+    "name": "next-seo-example",
+    "version": "0.0.1",
+    "description": "🔎 next seo example",
+    "keywords": [
+        "typescript",
+        "react",
+        "eslint",
+        "prettier",
+        "jest",
+        "next",
+        "seo",
+        "facebook",
+        "twitter",
+        "open graph",
+        "meta"
+    ],
+    "homepage": "https://github.com/bradgarropy/next-seo",
     "scripts": {
-        "start": "next dev"
+        "start": "next dev",
+        "build": "next build"
     },
     "dependencies": {
         "next": "11.0.1",
@@ -12,6 +27,7 @@
     },
     "devDependencies": {
         "@types/react": "17.0.11",
+        "eslint-config-next": "^11.0.1",
         "typescript": "4.3.4"
     }
 }
