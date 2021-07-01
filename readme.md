@@ -24,18 +24,45 @@ npm install @bradgarropy/next-seo
 
 ## 🥑 Usage
 
-`_app.js` file
-override in `/pages` components
-
-This plugin exports an `<SEO>` component that can be used without any `props`.
+To add a base set of SEO tags, create a [custom `<App/>` component][app] and add the `<SEO/>` component there. The SEO tags will render for every route in your site.
 
 ```jsx
+// ./pages/_app.js
+
 import SEO from "@bradgarropy/next-seo"
 
-const App = () => {
-    return <SEO title="My website" description="A blog and portfolio" />
+const MyApp = ({Component, pageProps}) => {
+    return (
+        <>
+            <SEO title="My website" description="A blog and portfolio" />
+            <Component {...pageProps} />
+        </>
+    )
 }
+
+export default MyApp
 ```
+
+If you want to override SEO tags on individual pages, use the `<SEO/>` component and only include the props that you want to update. For example, if you added `<SEO/>` in the `_app.js` file as shown above, and then included `<SEO/>` in the `about.js` file as shown below, the `description` would be overwritten to be `Learn more about me`.
+
+```jsx
+// ./pages/about.js
+
+import SEO from "@bradgarropy/next-seo"
+
+const AboutPage = () => {
+    return (
+        <>
+            <SEO description="Learn more about me" />
+            <Component {...pageProps} />
+        </>
+    )
+}
+
+export default AboutPage
+```
+
+With this capability, you can create a default set of SEO tags, and then tailor certain properties on specific pages.
 
 ## 📖 API Reference
 
@@ -134,3 +161,4 @@ All of the `SEO` props are optional. If a prop is not provided, the associated m
 [ama]: https://bradgarropy.com/ama
 [types]: https://ogp.me/#types
 [cards]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
+[app]: https://nextjs.org/docs/advanced-features/custom-app
