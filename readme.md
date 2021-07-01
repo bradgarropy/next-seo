@@ -151,7 +151,7 @@ All of the `SEO` props are optional. If a prop is not provided, the associated m
 [typescript-badge]: https://img.shields.io/npm/types/@bradgarropy/next-seo?style=flat-square
 [contributing]: https://github.com/bradgarropy/next-seo/blob/master/contributing.md
 [contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
-[contributors]: #-Contributors
+[contributors]: #-contributors
 [contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/next-seo?style=flat-square
 [discord]: https://bradgarropy.com/discord
 [discord-badge]: https://img.shields.io/discord/748196643140010015?style=flat-square
