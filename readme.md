@@ -10,7 +10,7 @@
 [![contributors][contributors-badge]][contributors]
 [![discord][discord-badge]][discord]
 
-_SEO component for [Next.js][next]._
+_🔎 seo component for [next.js][next]_
 
 [Next.js][next] provides a `<Head>` component to update meta tags. However, there's still much to understand if you want to achieve proper SEO. This component makes it easy to manage your SEO tags. It supports [Facebook][facebook], [Twitter][twitter], [Open Graph][og], and `meta` tags.
 
