@@ -92,7 +92,7 @@ All of the `SEO` props are optional. If a prop is not provided, the associated m
     title="My website"
     description="A blog and portfolio"
     keywords={["website", "blog", "portfolio"]}
-    icon="/favicon/ico"
+    icon="/favicon.ico"
     facebook={{
         image: "/facebook.png",
         url: "https://website.com",
