@@ -10,14 +10,16 @@
 [![contributors][contributors-badge]][contributors]
 [![discord][discord-badge]][discord]
 
-_SEO component for [Next.js][next]. Supports [Facebook][facebook], [Twitter][twitter], [Open Graph][og], and `meta` tags._
+_SEO component for [Next.js][next]._
+
+[Next.js][next] provides a `<Head>` component to update meta tags. However, there's still much to understand if you want to achieve proper SEO. This component makes it easy to manage your SEO tags, it supports [Facebook][facebook], [Twitter][twitter], [Open Graph][og], and `meta` tags.
 
 ## 📦 Installation
 
 This package is hosted on [`npm`][npm].
 
 ```bash
-npm install @bradgarropy/next-link
+npm install @bradgarropy/next-seo
 ```
 
 ### 🥑 Usage
@@ -46,7 +48,7 @@ const App = () => (
 
 ## 📖 API Reference
 
-### `<Link>`
+### `<SEO>`
 
 | Name | Required | Default | Example                                    | Description               |
 | :--- | :------: | :-----: | :----------------------------------------- | :------------------------ |
@@ -110,7 +112,7 @@ The component also passes through all other `props`, like `className` or `passHr
 [contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/next-seo?style=flat-square
 [discord]: https://bradgarropy.com/discord
 [discord-badge]: https://img.shields.io/discord/748196643140010015?style=flat-square
-[npm]: https://npmjs.com
+[npm]: https://npmjs.com/package/@bradgarropy/next-seo
 [issues]: https://github.com/bradgarropy/next-seo/issues
 [twitter]: https://twitter.com/bradgarropy
 [ama]: https://bradgarropy.com/ama
