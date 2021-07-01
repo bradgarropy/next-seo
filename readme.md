@@ -22,52 +22,65 @@ This package is hosted on [`npm`][npm].
 npm install @bradgarropy/next-seo
 ```
 
-### 🥑 Usage
+## 🥑 Usage
+
+`_app.js` file
+override in `/pages` components
 
 This plugin exports an `<SEO>` component that can be used without any `props`.
 
-```javascript
+```jsx
 import SEO from "@bradgarropy/next-seo"
 
-const App = () => <SEO />
-```
-
-If you want to customize the SEO properties on each page, the `<SEO>` component accepts three `props`: `title`, `description`, and `image`.
-
-```javascript
-import SEO from "@bradgarropy/next-seo"
-
-const App = () => (
-    <SEO
-        title="Custom page title."
-        description="My custom description."
-        image="https://github.com/bradgarropy.png"
-    />
-)
+const App = () => {
+    return <SEO title="My website" description="A blog and portfolio" />
+}
 ```
 
 ## 📖 API Reference
 
 ### `<SEO>`
 
-| Name | Required | Default | Example                                    | Description               |
-| :--- | :------: | :-----: | :----------------------------------------- | :------------------------ |
-| `to` |  `true`  |         | `"/home"` <br> `"https://bradgarropy.com"` | Internal or external url. |
+| Name             | Required | Example                            | Description                                                |
+| :--------------- | :------: | :--------------------------------- | :--------------------------------------------------------- |
+| `title`          | `false`  | `"My website"`                     | Page title.                                                |
+| `description`    | `false`  | `"A blog and portfolio"`           | Description of the page.                                   |
+| `keywords`       | `false`  | `["website", "blog", "portfolio"]` | Array of keywords.                                         |
+| `icon`           | `false`  | `"/favicon.ico"`                   | Tab icon url.                                              |
+| `facebook.image` | `false`  | `"/facebook.png"`                  | Facebook share image.                                      |
+| `facebook.url`   | `false`  | `"https://website.com"`            | Page URL.                                                  |
+| `facebook.type`  | `false`  | `"website"`                        | Type of resource. See all types [here][types].             |
+| `twitter.image`  | `false`  | `"/twitter.png"`                   | Twitter share image.                                       |
+| `twitter.site`   | `false`  | `"@bradgarropy"`                   | Twitter handle of publishing site.                         |
+| `twitter.card`   | `false`  | `"summary"`                        | Format of Twitter share card. See all types [here][cards]. |
 
 The component also passes through all other `props`, like `className` or `passHref`. See the [`next/link`][link] documentation for other relevant props. The examples below cover some common uses.
 
 ```jsx
-// internal link
-<Link to="/home">home</Link>
+// default seo
+<SEO
+    title="My website"
+    description="A blog and portfolio"
+    keywords={["website", "blog", "portfolio"]}
+    icon="/favicon/ico"
+    facebook={{
+        image: "/facebook.png",
+        url: "https://website.com",
+        type: "website",
+    }}
+    twitter={{
+        image: "/twitter.png",
+        site: "@bradgarropy",
+        card: "summary",
+    }}
+/>
 
-// internal link with additional props
-<Link to="/home" className="nav-link">home</Link>
-
-// external link
-<Link to="https://bradgarropy.com">website</Link>
-
-// external link with additional props
-<Link to="https://bradgarropy.com" className="nav-link">website</Link>
+// modified seo
+<SEO
+    title="My blog"
+    description="Posts about technology"
+    keywords={["website", "blog", "technology"]}
+/>
 ```
 
 ## ❔ Questions
@@ -116,3 +129,5 @@ The component also passes through all other `props`, like `className` or `passHr
 [issues]: https://github.com/bradgarropy/next-seo/issues
 [twitter]: https://twitter.com/bradgarropy
 [ama]: https://bradgarropy.com/ama
+[types]: https://ogp.me/#types
+[cards]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
