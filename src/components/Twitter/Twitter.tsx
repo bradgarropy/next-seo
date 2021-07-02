@@ -12,15 +12,37 @@ type TwitterProps = {
 const Twitter: FC<TwitterProps> = ({card, site, title, description, image}) => {
     return (
         <Head>
-            {card && <meta name="twitter:card" content={card} />}
-            {site && <meta name="twitter:site" content={site} />}
-            {title && <meta name="twitter:title" content={title} />}
-
-            {description && (
-                <meta name="twitter:description" content={description} />
+            {card && (
+                <meta key="twitter:card" name="twitter:card" content={card} />
             )}
 
-            {image && <meta name="twitter:image" content={image} />}
+            {site && (
+                <meta key="twitter:site" name="twitter:site" content={site} />
+            )}
+
+            {title && (
+                <meta
+                    key="twitter:title"
+                    name="twitter:title"
+                    content={title}
+                />
+            )}
+
+            {description && (
+                <meta
+                    key="twitter:description"
+                    name="twitter:description"
+                    content={description}
+                />
+            )}
+
+            {image && (
+                <meta
+                    key="twitter:image"
+                    name="twitter:image"
+                    content={image}
+                />
+            )}
         </Head>
     )
 }

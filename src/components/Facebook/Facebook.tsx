@@ -18,15 +18,24 @@ const Facebook: FC<FacebookProps> = ({
 }) => {
     return (
         <Head>
-            {url && <meta property="og:url" content={url} />}
-            {type && <meta property="og:type" content={type} />}
-            {title && <meta property="og:title" content={title} />}
+            {url && <meta key="og:url" property="og:url" content={url} />}
+            {type && <meta key="og:type" property="og:type" content={type} />}
 
-            {description && (
-                <meta property="og:description" content={description} />
+            {title && (
+                <meta key="og:title" property="og:title" content={title} />
             )}
 
-            {image && <meta property="og:image" content={image} />}
+            {description && (
+                <meta
+                    key="og:description"
+                    property="og:description"
+                    content={description}
+                />
+            )}
+
+            {image && (
+                <meta key="og:image" property="og:image" content={image} />
+            )}
         </Head>
     )
 }

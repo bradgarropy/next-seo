@@ -11,10 +11,25 @@ type MetaProps = {
 const Meta: FC<MetaProps> = ({title, description, keywords, icon}) => {
     return (
         <Head>
-            {title && <title>{title}</title>}
-            {description && <meta name="description" content={description} />}
-            {keywords && <meta name="keywords" content={keywords.join(", ")} />}
-            {icon && <link rel="icon" href={icon} />}
+            {title && <title key="title">{title}</title>}
+
+            {description && (
+                <meta
+                    key="description"
+                    name="description"
+                    content={description}
+                />
+            )}
+
+            {keywords && (
+                <meta
+                    key="keywords"
+                    name="keywords"
+                    content={keywords.join(", ")}
+                />
+            )}
+
+            {icon && <link key="icon" rel="icon" href={icon} />}
         </Head>
     )
 }
