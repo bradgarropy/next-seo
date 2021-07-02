@@ -8,6 +8,7 @@ node_modules
 # build
 .next
 dist
+next-env.d.ts
 
 # test
 coverage
