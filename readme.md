@@ -132,7 +132,8 @@ All of the `SEO` props are optional. If a prop is not provided, the associated m
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="https://github.com/bradgarropy/next-link/commits?author=bradgarropy" title="Code">💻</a> <a href="https://github.com/bradgarropy/next-link/commits?author=bradgarropy" title="Documentation">📖</a> <a href="https://github.com/bradgarropy/next-link/commits?author=bradgarropy" title="Tests">⚠️</a> <a href="#infra-bradgarropy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="https://github.com/bradgarropy/next-seo/commits?author=bradgarropy" title="Code">💻</a> <a href="https://github.com/bradgarropy/next-seo/commits?author=bradgarropy" title="Documentation">📖</a> <a href="https://github.com/bradgarropy/next-seo/commits?author=bradgarropy" title="Tests">⚠️</a> <a href="#infra-bradgarropy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://nickradford.dev"><img src="https://avatars.githubusercontent.com/u/222221?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Radford</b></sub></a><br /><a href="https://github.com/bradgarropy/next-seo/issues?q=author%3Anickradford" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
