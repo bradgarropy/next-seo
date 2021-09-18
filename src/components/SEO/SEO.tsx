@@ -4,6 +4,21 @@ import Facebook, {FacebookProps} from "../Facebook"
 import Meta from "../Meta"
 import Twitter, {TwitterProps} from "../Twitter"
 
+export interface MetaTag {
+    name?: string
+    httpEquiv?: string
+    charSet?: string
+    content?: string
+}
+
+export interface LinkTag {
+    rel: string
+    href: string
+    sizes?: string
+    type?: string
+    color?: string
+}
+
 type SEOProps = {
     title?: string
     description?: string
@@ -11,6 +26,8 @@ type SEOProps = {
     icon?: string
     facebook?: Pick<FacebookProps, "image" | "type" | "url">
     twitter?: Pick<TwitterProps, "image" | "card" | "site">
+    additionalMetaTags?: Array<MetaTag>
+    additionalLinkTags?: Array<LinkTag>
 }
 
 const SEO: FC<SEOProps> = ({
@@ -20,6 +37,8 @@ const SEO: FC<SEOProps> = ({
     icon,
     facebook,
     twitter,
+    additionalMetaTags,
+    additionalLinkTags,
 }) => {
     return (
         <>
@@ -28,6 +47,8 @@ const SEO: FC<SEOProps> = ({
                 description={description}
                 keywords={keywords}
                 icon={icon}
+                additionalMetaTags={additionalMetaTags}
+                additionalLinkTags={additionalLinkTags}
             />
 
             <Facebook
