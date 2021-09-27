@@ -55,4 +55,4 @@ const Facebook: FC<FacebookProps> = ({
 }
 
 export default Facebook
-export type {FacebookProps}
+export type {FacebookProps, ObjectType}

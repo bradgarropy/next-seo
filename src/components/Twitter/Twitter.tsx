@@ -50,4 +50,4 @@ const Twitter: FC<TwitterProps> = ({card, site, title, description, image}) => {
 }
 
 export default Twitter
-export type {TwitterProps}
+export type {CardType, TwitterProps}
