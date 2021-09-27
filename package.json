@@ -13,7 +13,8 @@
         "facebook",
         "twitter",
         "open graph",
-        "meta"
+        "meta",
+        "hacktoberfest"
     ],
     "homepage": "https://github.com/bradgarropy/next-seo",
     "bugs": {
