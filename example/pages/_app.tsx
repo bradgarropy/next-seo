@@ -12,6 +12,8 @@ const MyApp: FC<AppProps> = ({Component, pageProps}) => {
         description: pkg.description,
         keywords: pkg.keywords,
         icon: "/favicon.ico",
+        themeColor: "#0070f3",
+        colorScheme: "light",
         facebook: {
             image: "/facebook.png",
             type: "website",
