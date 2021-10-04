@@ -1,7 +1,7 @@
 import {FC} from "react"
 
 import Facebook, {FacebookProps} from "../Facebook"
-import Meta from "../Meta"
+import Meta, {ColorScheme} from "../Meta"
 import Twitter, {TwitterProps} from "../Twitter"
 
 type SEOProps = {
@@ -9,6 +9,8 @@ type SEOProps = {
     description?: string
     keywords?: string[]
     icon?: string
+    themeColor?: string
+    colorScheme?: ColorScheme
     facebook?: Pick<FacebookProps, "image" | "type" | "url">
     twitter?: Pick<TwitterProps, "image" | "card" | "site">
 }
@@ -18,6 +20,8 @@ const SEO: FC<SEOProps> = ({
     description,
     keywords,
     icon,
+    themeColor,
+    colorScheme,
     facebook,
     twitter,
 }) => {
@@ -28,6 +32,8 @@ const SEO: FC<SEOProps> = ({
                 description={description}
                 keywords={keywords}
                 icon={icon}
+                themeColor={themeColor}
+                colorScheme={colorScheme}
             />
 
             <Facebook

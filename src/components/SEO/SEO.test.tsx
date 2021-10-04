@@ -10,6 +10,8 @@ test("includes seo", () => {
             description={mockSEO.description}
             keywords={mockSEO.keywords}
             icon={mockSEO.icon}
+            themeColor={mockSEO.themeColor}
+            colorScheme={mockSEO.colorScheme}
             facebook={mockSEO.facebook}
             twitter={mockSEO.twitter}
         />,

@@ -6,9 +6,20 @@ type MetaProps = {
     description?: string
     keywords?: string[]
     icon?: string
+    themeColor?: string
+    colorScheme?: ColorScheme
 }
 
-const Meta: FC<MetaProps> = ({title, description, keywords, icon}) => {
+type ColorScheme = "normal" | "light" | "dark" | "only light"
+
+const Meta: FC<MetaProps> = ({
+    title,
+    description,
+    keywords,
+    icon,
+    themeColor,
+    colorScheme,
+}) => {
     return (
         <Head>
             {title && <title key="title">{title}</title>}
@@ -30,8 +41,25 @@ const Meta: FC<MetaProps> = ({title, description, keywords, icon}) => {
             )}
 
             {icon && <link key="icon" rel="icon" href={icon} />}
+
+            {themeColor && (
+                <meta
+                    key="themeColor"
+                    name="theme-color"
+                    content={themeColor}
+                />
+            )}
+
+            {colorScheme && (
+                <meta
+                    key="color-scheme"
+                    name="color-scheme"
+                    content={colorScheme}
+                />
+            )}
         </Head>
     )
 }
 
 export default Meta
+export type {ColorScheme, MetaProps}

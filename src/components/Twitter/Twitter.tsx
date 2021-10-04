@@ -1,11 +1,13 @@
 import Head from "next/head"
 import {FC} from "react"
 
+type CardType = "summary" | "summary_large_image" | "app" | "player"
+
 type TwitterProps = {
     title?: string
     description?: string
     image?: string
-    card?: string
+    card?: CardType
     site?: string
 }
 
@@ -48,4 +50,4 @@ const Twitter: FC<TwitterProps> = ({card, site, title, description, image}) => {
 }
 
 export default Twitter
-export {TwitterProps}
+export type {CardType, TwitterProps}

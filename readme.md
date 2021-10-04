@@ -80,6 +80,8 @@ With this capability, you can create a default set of SEO tags, and then tailor 
 | `description`    | `false`  | `"A blog and portfolio"`           | Description of the page.                                   |
 | `keywords`       | `false`  | `["website", "blog", "portfolio"]` | Array of keywords.                                         |
 | `icon`           | `false`  | `"/favicon.ico"`                   | Tab icon url.                                              |
+| `themeColor`     | `false`  | `"#000000"`                        | Browser theme color.                                       |
+| `colorScheme`    | `false`  | `"light"`                          | Preferred color scheme.                                    |
 | `facebook.image` | `false`  | `"/facebook.png"`                  | Facebook share image.                                      |
 | `facebook.url`   | `false`  | `"https://website.com"`            | Page URL.                                                  |
 | `facebook.type`  | `false`  | `"website"`                        | Type of resource. See all types [here][types].             |
@@ -99,6 +101,8 @@ All of the `SEO` props are optional. If a prop is not provided, the associated m
     description="A blog and portfolio"
     keywords={["website", "blog", "portfolio"]}
     icon="/favicon.ico"
+    themeColor="#000000"
+    colorScheme="light"
     facebook={{
         image: "/facebook.png",
         url: "https://website.com",

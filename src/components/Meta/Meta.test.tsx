@@ -10,6 +10,8 @@ test("includes meta", () => {
             description={mockMeta.description}
             keywords={mockMeta.keywords}
             icon={mockMeta.icon}
+            themeColor={mockMeta.themeColor}
+            colorScheme={mockMeta.colorScheme}
         />,
     )
 
@@ -25,13 +27,25 @@ test("includes meta", () => {
         .querySelector("meta[name='keywords']")
         ?.getAttribute("content")
 
-    expect(keywords).toEqual(mockMeta.keywords.join(", "))
+    expect(keywords).toEqual(mockMeta.keywords?.join(", "))
 
     const icon = document
         .querySelector("link[rel='icon']")
         ?.getAttribute("href")
 
     expect(icon).toEqual(mockMeta.icon)
+
+    const themeColor = document
+        .querySelector("meta[name='theme-color']")
+        ?.getAttribute("content")
+
+    expect(themeColor).toEqual(mockMeta.themeColor)
+
+    const colorScheme = document
+        .querySelector("meta[name='color-scheme']")
+        ?.getAttribute("content")
+
+    expect(colorScheme).toEqual(mockMeta.colorScheme)
 })
 
 test("includes default meta", () => {
@@ -47,4 +61,10 @@ test("includes default meta", () => {
 
     const icon = document.querySelector("link[rel='icon']")
     expect(icon).toBeNull()
+
+    const themeColor = document.querySelector("meta[name='theme-color']")
+    expect(themeColor).toBeNull()
+
+    const colorScheme = document.querySelector("meta[name='color-scheme']")
+    expect(colorScheme).toBeNull()
 })
